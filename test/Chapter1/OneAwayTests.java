@@ -1,6 +1,5 @@
-package test.Chapter1;
+package Chapter1;
 
-import main.ArraysAndStrings;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -21,19 +20,19 @@ public class OneAwayTests {
 
     @Test
     public void oneAwayTest1() {
-        boolean result = arraysAndStrings.oneAway("test", "tst");
+        boolean result = arraysAndStrings.oneAway("", "tst");
         assertTrue(result);
     }
 
     @Test
     public void oneAwayTest2() {
-        boolean result = arraysAndStrings.oneAway("tst", "test");
+        boolean result = arraysAndStrings.oneAway("tst", "");
         assertTrue(result);
     }
 
     @Test
     public void oneAwayTest3() {
-        boolean result = arraysAndStrings.oneAway("test", "tast");
+        boolean result = arraysAndStrings.oneAway("", "tast");
         assertTrue(result);
     }
 

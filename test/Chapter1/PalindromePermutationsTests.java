@@ -1,20 +1,16 @@
-package test.Chapter1;
+package Chapter1;
 
-import main.ArraysAndStrings;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.Arrays;
-
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 /**
  * Created by Andre-PC on 9/27/2018.
  */
-public class URLifyTests {
+public class PalindromePermutationsTests {
 
     private ArraysAndStrings arraysAndStrings;
 
@@ -24,10 +20,15 @@ public class URLifyTests {
     }
 
     @Test
-    public void URLifyTest1() {
-        char[] exp = "Mr%20John%20Smith".toCharArray();
-        char[] actual = arraysAndStrings.URLify("Mr John Smith    ".toCharArray(), 13);
-        assertTrue(Arrays.equals(exp, actual));
+    public void palindromePermutationsTest1() {
+        boolean result = arraysAndStrings.palindromePermutation("Tact oac");
+        assertTrue(result);
+    }
+
+    @Test
+    public void palindromePermutationsTest2() {
+        boolean result = arraysAndStrings.palindromePermutation("test act");
+        assertFalse(result);
     }
 
     @After

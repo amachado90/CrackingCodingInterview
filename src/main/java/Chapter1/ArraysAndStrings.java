@@ -1,4 +1,4 @@
-package main;
+package Chapter1;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -12,7 +12,7 @@ public class ArraysAndStrings {
     public boolean isUnique(String str) {
         boolean unique = true;
 
-        ArrayList<String> chars = new ArrayList<>();
+        ArrayList<String> chars = new ArrayList<String>();
         for (int i = 0; i<str.length(); i++) {
             if (chars.contains(""+str.charAt(i))) {
                 unique = false;
@@ -62,7 +62,7 @@ public class ArraysAndStrings {
 
     public boolean palindromePermutation(String str) {
         str = str.toLowerCase().replaceAll(" ", "");
-        Map<String, Integer> map = new HashMap<>();
+        Map<String, Integer> map = new HashMap<String, Integer>();
         int oddCount = 0;
         for (char ch : str.toCharArray()) {
             if (map.keySet().contains(""+ch)) {
@@ -166,8 +166,8 @@ public class ArraysAndStrings {
     }
 
     public int[][] zeroMatrix(int[][] matrix) {
-        ArrayList<Integer> zeroColumns = new ArrayList<>();
-        ArrayList<Integer> zeroRows = new ArrayList<>();
+        ArrayList<Integer> zeroColumns = new ArrayList<Integer>();
+        ArrayList<Integer> zeroRows = new ArrayList<Integer>();
         int height = matrix.length;
         int width = matrix[0].length;
         for (int i = 0; i<height; i++) {

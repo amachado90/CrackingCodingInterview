@@ -1,9 +1,10 @@
-package test.Chapter1;
+package Chapter1;
 
-import main.ArraysAndStrings;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
+import static Chapter1.Util.PrintMatrix.printMatrix;
 
 /**
  * Created by Andre-PC on 9/27/2018.
@@ -64,20 +65,6 @@ public class ZeroMatrixTests {
         int result[][] = arraysAndStrings.zeroMatrix(matrix);
         System.out.println("=========================");
         printMatrix(result);
-    }
-
-    private void printMatrix(int[][] matrix) {
-
-        for (int i = 0; i< matrix.length; i++) {
-            StringBuilder printme = new StringBuilder();
-            printme.append("[ ");
-            for (int j = 0; j<matrix[i].length; j++) {
-                printme.append(String.format("%02d", matrix[i][j]));
-                printme.append(", ");
-            }
-            printme.replace(printme.lastIndexOf(","), printme.lastIndexOf(",")+1, "]");
-            System.out.println(printme.toString());
-        }
     }
 
     @After

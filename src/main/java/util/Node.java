@@ -1,4 +1,4 @@
-package main.util;
+package util;
 
 /**
  * Created by Andre-PC on 10/10/2018.

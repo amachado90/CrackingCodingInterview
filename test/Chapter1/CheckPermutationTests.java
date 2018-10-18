@@ -1,6 +1,5 @@
-package test.Chapter1;
+package Chapter1;
 
-import main.ArraysAndStrings;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
