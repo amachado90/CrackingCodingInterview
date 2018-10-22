@@ -5,7 +5,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static Chapter1.Util.PrintMatrix.printMatrix;
-import static org.junit.Assert.assertTrue;
 
 /**
  * Created by Andre-PC on 9/27/2018.

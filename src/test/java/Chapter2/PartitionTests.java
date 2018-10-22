@@ -3,7 +3,7 @@ package Chapter2;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import util.Node;
+import Chapter2.util.Node;
 
 import static Chapter2.Util.PrintNodeList.printNodeList;
 

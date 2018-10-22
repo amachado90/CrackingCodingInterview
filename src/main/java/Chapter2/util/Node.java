@@ -1,4 +1,4 @@
-package util;
+package Chapter2.util;
 
 /**
  * Created by Andre-PC on 10/10/2018.

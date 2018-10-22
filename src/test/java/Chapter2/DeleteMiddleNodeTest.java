@@ -3,14 +3,14 @@ package Chapter2;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import util.Node;
+import Chapter2.util.Node;
 
 import static Chapter2.Util.PrintNodeList.printNodeList;
 
 /**
  * Created by Andre on 10/17/2018.
  */
-public class SumListsTests {
+public class DeleteMiddleNodeTest {
 
     private LinkedLists linkedLists;
     private Node head;
@@ -18,19 +18,16 @@ public class SumListsTests {
     @Before
     public void init() {
         linkedLists = new LinkedLists();
+        head = new Node(0);
     }
 
     @Test
-    public void partitionTest() {
-        Node a = new Node(0);
-        a.appendToTail(0);
-        a.appendToTail(2);
-        Node b = new Node(8);
-        b.appendToTail(2);
-        b.appendToTail(4);
-        printNodeList(a);
-        printNodeList(b);
-        head = linkedLists.sumLists(a,b);
+    public void deleteMiddleNodeTest() {
+        Node n = new Node(4);
+        head.next = n;
+        head.appendToTail(3);
+        printNodeList(head);
+        linkedLists.deleteMiddleNode(n);
         printNodeList(head);
     }
 

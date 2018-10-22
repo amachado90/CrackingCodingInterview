@@ -1,7 +1,8 @@
 package Chapter2;
 
-import util.Node;
+import Chapter2.util.Node;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Andre-PC on 10/10/2018.
@@ -89,5 +90,38 @@ public class LinkedLists {
         }
 
         return returnNode;
+    }
+
+    public boolean isPalindrome(Node node) {
+        String forwards = "";
+        String backwards = "";
+        Node current = node;
+        do {
+            int data = current.data;
+            forwards += data;
+            backwards = data + backwards;
+        } while ((current = current.next) != null);
+        return forwards.equals(backwards);
+    }
+
+    public Node intersecting(Node n1, Node n2) {
+        do {
+            Node second = n2;
+            do {
+                if (n1.equals(second))
+                    return n1;
+            } while ((second = second.next) != null);
+        } while ((n1 = n1.next) != null);
+        return null;
+    }
+
+    public Node loopDetection(Node loop) {
+        List<Node> nodes = new ArrayList<>();
+        do {
+            if (nodes.contains(loop))
+                return loop;
+            nodes.add(loop);
+        } while ((loop = loop.next) != null);
+        return null;
     }
 }

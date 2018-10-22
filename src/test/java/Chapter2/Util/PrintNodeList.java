@@ -1,6 +1,6 @@
 package Chapter2.Util;
 
-import util.Node;
+import Chapter2.util.Node;
 
 /**
  * Created by Andre on 10/17/2018.
